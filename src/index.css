@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Linear.app variables */
+    --background: #0A0A0B;
+    --foreground: #FFFFFF;
+    --card: #161617;
+    --card-foreground: #FFFFFF;
+    --primary: #F72960;
+    --primary-foreground: #FFFFFF;
+    --secondary: #0D9488;
+    --secondary-foreground: #FFFFFF;
+    --border: #27272A;
+    --input: #27272A;
+    --ring: #F72960;
+    --muted: #161617;
+    --muted-foreground: #A1A1AA;
+    --accent: #161617;
+    --accent-foreground: #FFFFFF;
+    --destructive: #EF4444;
+    --destructive-foreground: #FFFFFF;
+    --popover: #161617;
+    --popover-foreground: #FFFFFF;
+  }
+
+  .dark {
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-text-primary font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* Smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom scrollbar for Linear aesthetic */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #0A0A0B;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #27272A;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3F3F46;
+  }
+}
+
+img {
+  object-position: top;
+}
+
+.fixed {
+  position: fixed;
+}
+
+/* Animation utilities */
+@layer utilities {
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  .animation-duration-linear {
+    animation-duration: 200ms;
+  }
+}
